@@ -1,0 +1,12 @@
+[submodule "featuresextractor"]
+	path = featuresextractor
+	url = https://gitlab.com/ahmad.elsallab/featuresextractor.git
+[submodule "languagemodel"]
+	path = languagemodel
+	url = https://gitlab.com/ahmad.elsallab/languagemodel.git
+[submodule "datasetbuilder"]
+	path = datasetbuilder
+	url = https://gitlab.com/ahmad.elsallab/datasetbuilder.git
+[submodule "classifiers"]
+	path = classifiers
+	url = https://gitlab.com/ahmad.elsallab/classifiers.git
