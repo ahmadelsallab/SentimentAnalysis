@@ -10,3 +10,9 @@
 [submodule "classifiers"]
 	path = classifiers
 	url = https://gitlab.com/ahmad.elsallab/classifiers.git
+[submodule "twittercrawler"]
+	path = twittercrawler
+	url = https://gitlab.com/ahmad.elsallab/twittercrawler.git
+[submodule "sentimentwebsite"]
+	path = sentimentwebsite
+	url = https://gitlab.com/ahmad.elsallab/sentimentwebsite.git
