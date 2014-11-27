@@ -3,12 +3,15 @@ Created on Nov 27, 2014
 
 @author: asallab
 '''
-
+'''
+import os
+print(os.getcwd())
+'''
 import pickle
-from DatasetBuilder.DatasetBuilder import DatasetBuilder
-from LanguageModel.LanguageModel import LanguageModel   
-from FeaturesExtractor.FeaturesExtractor import FeaturesExtractor
-from Classifiers.Classifier import Classifier
+from datasetbuilder.DatasetBuilder import DatasetBuilder
+from languagemodel.LanguageModel import LanguageModel   
+from featuresextractor.FeaturesExtractor import FeaturesExtractor
+from classifiers.Classifier import Classifier
 
 # Start the DatasetBuilder
 #-------------------------
