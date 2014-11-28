@@ -34,10 +34,10 @@ datasetBuilder.SplitTrainTest()
 configFileLanguageModel = "configurations\\Configurations_LanguageModel-lexicon.xml"
 
 #positiveLangModelTxtLoadFile = ".\\LanguageModel\\Input\\Eshrag-positive.txt"
-positiveLangModelTxtLoadFile = ".\\LanguageModel\\Input\\positive.txt"
+positiveLangModelTxtLoadFile = "input_data\\positive.txt"
 #negativeLangModelTxtLoadFile = ".\\LanguageModel\\Input\\Eshrag-negative.txt"
-negativeLangModelTxtLoadFile = ".\\LanguageModel\\Input\\negative.txt"
-stopWordsFileName = ".\\LanguageModel\\Input\\stop_words.txt"
+negativeLangModelTxtLoadFile = "input_data\\negative.txt"
+stopWordsFileName = "input_data\\stop_words.txt"
 # The serialization file to save the model
 languageModelSerializationFile = ".\\LanguageModel\\Output\\language_model.bin"
 
@@ -63,7 +63,7 @@ testFeaturesExtractor.ExtractLexiconFeatures()
 # Start the Classifier:
 #----------------------
 # The serialization file to save the features
-configFileClassifier = ".\\Classifier\\Configurations\\Configurations_Classifier-lexicon.xml"
+configFileClassifier = "configurations\\Configurations_Classifier-lexicon.xml"
 
 
 classifier = Classifier(configFileClassifier, [],  None, None, testFeaturesExtractor.features, testFeaturesExtractor.labels)
