@@ -56,7 +56,7 @@ configFileFeaturesExtractor = "configurations\\Configurations_FeaturesExtractor-
 
  
 # Initialize the FeaturesExtractor
-testFeaturesExtractor = FeaturesExtractor(configFileFeaturesExtractor, [], [], languageModel, datasetBuilder.testSet)
+testFeaturesExtractor = FeaturesExtractor(configFileFeaturesExtractor, [], [], languageModel, datasetBuilder.trainSet)
 testFeaturesExtractor.ExtractLexiconFeatures()
 
 

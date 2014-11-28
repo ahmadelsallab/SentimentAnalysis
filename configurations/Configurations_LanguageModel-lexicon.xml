@@ -14,6 +14,8 @@
   <!--Set to true to remove trailing and leading #tags-->
   <RemoveLeadTrailTags removeLeadTrailTags="false"></RemoveLeadTrailTags>
   <!--Mapping of labels to indices for libsvm format. Indices are 1 based so 0 is not permitted-->
-  <Label label="relevant"></Label>
-  <Label label="irrelevant"></Label>
+  <Label label="Positive"></Label>
+  <Label label="Negative"></Label>
+  <Label label="Neutral"></Label>
+  <Label label="Mixed"></Label>
 </Configurations>

@@ -11,6 +11,8 @@
   <!--Set to true if the used package is LibSVM-->
   <LibSVMFormat libSVMFormat="true"></LibSVMFormat>
   <!--Indices are 1 based so 0 is not permitted. The positive class shall be mentioned first-->
-  <Label label="relevant"></Label>
-  <Label label="irrelevant"></Label>
+  <Label label="Positive"></Label>
+  <Label label="Negative"></Label>
+  <Label label="Neutral"></Label>
+  <Label label="Mixed"></Label>
 </Configurations>
