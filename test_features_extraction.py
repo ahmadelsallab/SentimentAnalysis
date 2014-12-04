@@ -53,11 +53,12 @@ languageModel.LoadSentimentLexiconModelFromTxtFile(negativeLangModelTxtLoadFile,
 #-----------------------------
 # Configurations file xml of the features extractor
 configFileFeaturesExtractor = "configurations\\Configurations_FeaturesExtractor-Lexicon.xml"
-
+exportFileName = "output_results\\features.txt"
  
 # Initialize the FeaturesExtractor
 testFeaturesExtractor = FeaturesExtractor(configFileFeaturesExtractor, [], [], languageModel, datasetBuilder.trainSet)
 testFeaturesExtractor.ExtractLexiconFeatures()
+testFeaturesExtractor.DumpFeaturesToTxt(exportFileName)
 
 
 # Start the Classifier:
