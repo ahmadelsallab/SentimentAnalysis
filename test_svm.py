@@ -57,14 +57,14 @@ exportFileName = "output_results\\features.txt"
  
 # Initialize the FeaturesExtractor
 testFeaturesExtractor = FeaturesExtractor(configFileFeaturesExtractor, [], [], languageModel, datasetBuilder.testSet)
-#testFeaturesExtractor.ExtractLexiconFeatures()
-testFeaturesExtractor.ExtractCollectiveLexiconFeatures()
+testFeaturesExtractor.ExtractLexiconFeatures()
+#testFeaturesExtractor.ExtractCollectiveLexiconFeatures()
 #testFeaturesExtractor.DumpFeaturesToTxt(exportFileName)
 testFeaturesExtractor.DumpFeaturesToTxt("output_results\\test_data_file.txt")
 
 trainFeaturesExtractor = FeaturesExtractor(configFileFeaturesExtractor, [], [], languageModel, datasetBuilder.trainSet)
-#trainFeaturesExtractor.ExtractLexiconFeatures()
-trainFeaturesExtractor.ExtractCollectiveLexiconFeatures()
+trainFeaturesExtractor.ExtractLexiconFeatures()
+#trainFeaturesExtractor.ExtractCollectiveLexiconFeatures()
 trainFeaturesExtractor.DumpFeaturesToTxt(exportFileName)
 trainFeaturesExtractor.DumpFeaturesToTxt("output_results\\train_data_file.txt")
 
