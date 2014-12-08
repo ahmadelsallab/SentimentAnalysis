@@ -46,7 +46,7 @@ languageModelSerializationFile = ".\\LanguageModel\\Output\\language_model.bin"
 # Initialize the LanguageModel
 languageModel = LanguageModel(configFileLanguageModel, stopWordsFileName, [], [], datasetBuilder.trainSet)
 languageModel.LoadSentimentLexiconModelFromTxtFile(positiveLangModelTxtLoadFile, 1)
-languageModel.LoadSentimentLexiconModelFromTxtFile(negativeLangModelTxtLoadFile, 1)
+languageModel.LoadSentimentLexiconModelFromTxtFile(negativeLangModelTxtLoadFile, -1)
 
 
 # Start the FeaturesExtractor:
@@ -57,12 +57,16 @@ exportFileName = "output_results\\features.txt"
  
 # Initialize the FeaturesExtractor
 testFeaturesExtractor = FeaturesExtractor(configFileFeaturesExtractor, [], [], languageModel, datasetBuilder.testSet)
-testFeaturesExtractor.ExtractLexiconFeatures()
+#testFeaturesExtractor.ExtractLexiconFeatures()
+testFeaturesExtractor.ExtractCollectiveLexiconFeatures()
 #testFeaturesExtractor.DumpFeaturesToTxt(exportFileName)
+testFeaturesExtractor.DumpFeaturesToTxt("output_results\\test_data_file.txt")
 
 trainFeaturesExtractor = FeaturesExtractor(configFileFeaturesExtractor, [], [], languageModel, datasetBuilder.trainSet)
-trainFeaturesExtractor.ExtractLexiconFeatures()
+#trainFeaturesExtractor.ExtractLexiconFeatures()
+trainFeaturesExtractor.ExtractCollectiveLexiconFeatures()
 trainFeaturesExtractor.DumpFeaturesToTxt(exportFileName)
+trainFeaturesExtractor.DumpFeaturesToTxt("output_results\\train_data_file.txt")
 
 # Start the Classifier:
 #----------------------

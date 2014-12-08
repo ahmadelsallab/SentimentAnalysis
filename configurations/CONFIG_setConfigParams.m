@@ -101,7 +101,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [20 20 20];
+    CONFIG_strParams.vInitialLayersWidths = [500 200 100];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,
@@ -129,7 +129,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nNumTrainedUpperLayers = 1; % It means update w_class and NW_weights{CONFIG_strParams.nInitialNumLayers} (last layer), so number is the execluding the top layer
     
     % Is pre-training enabled
-    CONFIG_strParams.bEnablePretraining = 1;
+    CONFIG_strParams.bEnablePretraining = 0;
         if (CONFIG_strParams.bEnablePretraining == 1) 
             % Pre-training (RBM) epochs
             CONFIG_strParams.nPreTrainEpochs = 20;

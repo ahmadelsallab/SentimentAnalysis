@@ -1,6 +1,6 @@
 [submodule "featuresextractor"]
 	path = featuresextractor
-	url = https://gitlab.com/ahmad.elsallab/featuresextractor.git
+	url = https://username:passwor@gitlab.com/ahmad.elsallab/featuresextractor.git
     branch = master
 [submodule "languagemodel"]
 	path = languagemodel
