@@ -101,7 +101,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [500 200 100];
+    CONFIG_strParams.vInitialLayersWidths = [5000 2000 1000];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,

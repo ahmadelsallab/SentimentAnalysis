@@ -14,7 +14,7 @@
    <!--The desired size of crawled tweets. A negative value means non-stop-->
   <DesiredDataSize desiredDataSize="50000"></DesiredDataSize>
   <!--Inhbit saving to log file-->
-  <InhibitLogFileSaving inhibitLogFileSaving="false"></InhibitLogFileSaving>
+  <InhibitLogFileSaving inhibitLogFileSaving="true"></InhibitLogFileSaving>
   <!--Inhbit saving to local structure-->
   <InhibitSavingToLocalStruct inhibitSavingToLocalStruct="false"></InhibitSavingToLocalStruct>
   <!--The geocode parameters of the area of tweets to be captured: latitude, longitude, radius. Ex: Saudi Arabia: 23.88589, 45.07933, 100mi-->
