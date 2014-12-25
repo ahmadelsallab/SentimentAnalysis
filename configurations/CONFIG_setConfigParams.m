@@ -28,19 +28,19 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     % MATLAB: the input is just an auto-generated matlab function setting
     % the matrices values
     % TxtFile: the input is a txt file needs to be parsed
-    CONFIG_strParams.sInputFormat = 'TxtFile';
+    CONFIG_strParams.sInputFormat = 'MatlabWorkspaceReadyTestTrainSplit';
 	
 	% Configuration of the dataset to be used
 	% MNIST
 	% Diacritization
 	% TIMIT (Not supported yet)
-	CONFIG_strParams.sDataset = '';
+	CONFIG_strParams.sDataset = 'ATB_Senti';
 	
 	% The path of the dataset files
-	CONFIG_strParams.sDatasetFilesPath = '';
+	CONFIG_strParams.sDatasetFilesPath = 'C:\Non_valeo\Research\PostDoc\Sentiment Analysis\Code\Datasets\ATB\';
 	
 	% In case subclass training is required, only subset targets are permitted in the dataset
-	CONFIG_strParams.vSubClassTargets = 0:3;
+	CONFIG_strParams.vSubClassTargets = 0:1;
     
     % Path of the features file
     CONFIG_strParams.sDefaultPath = CONFIG_strParams.sConfigEnvPath;
@@ -49,14 +49,15 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.sMemorySavingMode = 'OFF';
     
     % Features file name
-    CONFIG_strParams.sFeaturesFileName = 'features.txt';
+    CONFIG_strParams.sFeaturesFileName = 'features\arsenl_lemma (SentiScore).csv';
+    
     CONFIG_strParams.eFeaturesMode = 'Normal';
     
     % Name of the workspace to save the error structure
     CONFIG_strParams.sNameofErrWorkspace = [CONFIG_strParams.sConfigEnvPath '\err_performance.mat'];
     
     % Name of the input data structures workspace
-    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data_reduced.mat'];
+    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data.mat'];
     
     % Name of the input data structures workspace
     CONFIG_strParams.sNetDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\final_net.mat'];
@@ -101,19 +102,19 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [5000 2000 1000];
+    CONFIG_strParams.vInitialLayersWidths = [35 200 100 20];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,
     % then all final layers will be multiplied by 5.
-    CONFIG_strParams.nFinalFirstLayerWidth = 20;
+    CONFIG_strParams.nFinalFirstLayerWidth = 35;
     
     % In case of depth, this is the final depth required.
     CONFIG_strParams.nFinalNumLayers = 3;
     
     % Number of iterations in backprop in which only upper layer weights
     % are updated
-    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 10;
+    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 0;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
     CONFIG_strParams.nBPNumEpochsBeforeMapping = 50;
@@ -139,7 +140,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Flag to indicate if it's desired to update weights in each epoch of
     % backprop only if error is minimized otherwise it's not updated
-    CONFIG_strParams.bBPKeepMinWeightsEveryEpoch = 0;   
+    CONFIG_strParams.bBPKeepMinWeightsEveryEpoch = 1;   
     
     % Backprop divides each batch into mini batches, each composed of
     % nBPNumExamplesInMiniBatch examples
