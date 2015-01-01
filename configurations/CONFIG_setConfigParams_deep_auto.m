@@ -4,7 +4,7 @@
 % None.
 % Output:
 % CONFIG_strParams: Structure of all configuration parameters
-function [CONFIG_strParams] = CONFIG_setConfigParams()
+function [CONFIG_strParams] = CONFIG_setConfigParams_deep_auto()
 
     % Path of the classifier code. For relative path: it'll run from the
     % configuration env. path, so it should be relative to it
@@ -15,11 +15,6 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     % classifier folder path, so it should be relative to it
 	CONFIG_strParams.sConfigEnvPath = pwd;
     
-    % Global configuration defining the activation of neuron:
-    % sigmoid
-    % tanh
-    global sActivationFunction;
-    sActivationFunction = 'sigmoid';
     % Desired reduction of the training set
     % It is represented in the form of percent of the original set size
 	CONFIG_strParams.bReduceTrainingSetSizeWithMapping = 0;
@@ -107,7 +102,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [800 800 800];
+    CONFIG_strParams.vInitialLayersWidths = [100 50 20];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,
@@ -119,13 +114,13 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Number of iterations in backprop in which only upper layer weights
     % are updated
-    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 40;
+    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 6;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
-    CONFIG_strParams.nBPNumEpochsBeforeMapping = 50;
+    CONFIG_strParams.nBPNumEpochsBeforeMapping = 10;
     
     % Number of epochs in backprop training during mapping (re-use) phase
-    CONFIG_strParams.nBPNumEpochsDuringMapping = 20;
+    CONFIG_strParams.nBPNumEpochsDuringMapping = 1;
     
     % Iterations to call CG minimizer
     CONFIG_strParams.nMaxIterCGMinimizer = 3;
@@ -135,7 +130,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nNumTrainedUpperLayers = 1; % It means update w_class and NW_weights{CONFIG_strParams.nInitialNumLayers} (last layer), so number is the execluding the top layer
     
     % Is pre-training enabled
-    CONFIG_strParams.bEnablePretraining = 0;
+    CONFIG_strParams.bEnablePretraining = 1;
         if (CONFIG_strParams.bEnablePretraining == 1) 
             % Pre-training (RBM) epochs
             CONFIG_strParams.nPreTrainEpochs = 50;
@@ -145,7 +140,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Flag to indicate if it's desired to update weights in each epoch of
     % backprop only if error is minimized otherwise it's not updated
-    CONFIG_strParams.bBPKeepMinWeightsEveryEpoch = 1;   
+    CONFIG_strParams.bBPKeepMinWeightsEveryEpoch = 0;   
     
     % Backprop divides each batch into mini batches, each composed of
     % nBPNumExamplesInMiniBatch examples
