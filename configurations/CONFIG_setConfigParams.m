@@ -19,7 +19,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     % sigmoid
     % tanh
     global sActivationFunction;
-    sActivationFunction = 'sigmoid';
+    sActivationFunction = 'tanh';
     % Desired reduction of the training set
     % It is represented in the form of percent of the original set size
 	CONFIG_strParams.bReduceTrainingSetSizeWithMapping = 0;
