@@ -24,6 +24,14 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     % It is represented in the form of percent of the original set size
 	CONFIG_strParams.bReduceTrainingSetSizeWithMapping = 0;
     CONFIG_strParams.nDesiredTrainSetSizePercent = 90;
+    
+    % Development set (held out data) ratio in %
+    CONFIG_strParams.nDevSetPercent = 10;
+    
+    % Type of minimizer
+    % CG: Conjugate Gradients
+    % SGD: Stochastic Gradient Descent
+    CONFIG_strParams.sMinimzerType = 'SGD'
 	
 	% Flag to be set to 1 if doubling the dataset size is required each mapping phase
 	CONFIG_strParams.bDoubleTrainingSetSizeWithMapping = 0;
@@ -107,7 +115,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [800 800 800];
+    CONFIG_strParams.vInitialLayersWidths = [1000 1000 1000];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,
@@ -119,7 +127,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Number of iterations in backprop in which only upper layer weights
     % are updated
-    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 40;
+    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 50;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
     CONFIG_strParams.nBPNumEpochsBeforeMapping = 50;
@@ -145,7 +153,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Flag to indicate if it's desired to update weights in each epoch of
     % backprop only if error is minimized otherwise it's not updated
-    CONFIG_strParams.bBPKeepMinWeightsEveryEpoch = 1;   
+    CONFIG_strParams.bBPKeepMinWeightsEveryEpoch = 0;   
     
     % Backprop divides each batch into mini batches, each composed of
     % nBPNumExamplesInMiniBatch examples

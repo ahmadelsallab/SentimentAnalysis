@@ -23,6 +23,11 @@ function [CONFIG_strParams] = CONFIG_setConfigParams_deep_auto()
 	% Flag to be set to 1 if doubling the dataset size is required each mapping phase
 	CONFIG_strParams.bDoubleTrainingSetSizeWithMapping = 0;
 	
+    % Global configuration defining the activation of neuron:
+    % sigmoid
+    % tanh
+    global sActivationFunction;
+    sActivationFunction = 'tanh';
 	
     % Configuration of the input format
     % MATLAB: the input is just an auto-generated matlab function setting
@@ -60,7 +65,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams_deep_auto()
     CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data.mat'];
     
     % Name of the input data structures workspace
-    CONFIG_strParams.sNetDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\final_net.mat'];
+    CONFIG_strParams.sNetDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\final_net_deep_auto.mat'];
 
     % Form the full path of the features file
     CONFIG_strParams.fullRawDataFileName = ['..\..\output_results\' CONFIG_strParams.sFeaturesFileName];
