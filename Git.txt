@@ -1,0 +1,6 @@
+git submodule foreach git add *
+git submodule foreach "git commit -m'Message' || :"
+git submodule foreach git push origin HEAD:master
+git add *
+git commit -m"Message"
+git push origin master:master

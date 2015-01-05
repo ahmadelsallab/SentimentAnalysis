@@ -1,0 +1,7 @@
+cd module
+git config https://user:pass@gitlab.com/ahmad.elsallab/classifiers.git
+
+OR search:
+url = https://gitlab.com/ahmad.elsallab/
+replace:
+url = https://user:pass@gitlab.com/ahmad.elsallab/
