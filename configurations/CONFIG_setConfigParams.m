@@ -31,7 +31,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     % Type of minimizer
     % CG: Conjugate Gradients
     % SGD: Stochastic Gradient Descent
-    CONFIG_strParams.sMinimzerType = 'SGD'
+    CONFIG_strParams.sMinimzerType = 'SGD';
 	
 	% Flag to be set to 1 if doubling the dataset size is required each mapping phase
 	CONFIG_strParams.bDoubleTrainingSetSizeWithMapping = 0;
@@ -127,7 +127,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Number of iterations in backprop in which only upper layer weights
     % are updated
-    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 50;
+    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 0;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
     CONFIG_strParams.nBPNumEpochsBeforeMapping = 50;
