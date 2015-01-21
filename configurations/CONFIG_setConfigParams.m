@@ -26,12 +26,12 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nDesiredTrainSetSizePercent = 90;
     
     % Development set (held out data) ratio in %
-    CONFIG_strParams.nDevSetPercent = 10;
+    CONFIG_strParams.nDevSetPercent = 0;
     
     % Type of minimizer
     % CG: Conjugate Gradients
     % SGD: Stochastic Gradient Descent
-    CONFIG_strParams.sMinimzerType = 'SGD';
+    CONFIG_strParams.sMinimzerType = 'CG';
 	
 	% Flag to be set to 1 if doubling the dataset size is required each mapping phase
 	CONFIG_strParams.bDoubleTrainingSetSizeWithMapping = 0;
@@ -47,7 +47,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
 	% MNIST
 	% Diacritization
 	% TIMIT (Not supported yet)
-	CONFIG_strParams.sDataset = 'ATB_Senti';
+	CONFIG_strParams.sDataset = '';
 	
 	% The path of the dataset files
 	CONFIG_strParams.sDatasetFilesPath = 'C:\Non_valeo\Research\PostDoc\Sentiment Analysis\Code\Datasets\ATB\';
@@ -62,7 +62,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.sMemorySavingMode = 'OFF';
     
     % Features file name
-    CONFIG_strParams.sFeaturesFileName = 'features\arsenl_lemma (SentiScore).csv';
+    CONFIG_strParams.sFeaturesFileName = 'features\arsenl_sentence (sentiScore).csv';
     
     CONFIG_strParams.eFeaturesMode = 'Normal';
     
@@ -70,7 +70,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.sNameofErrWorkspace = [CONFIG_strParams.sConfigEnvPath '\err_performance.mat'];
     
     % Name of the input data structures workspace
-    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data.mat'];
+    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data_auto_encoder_codes.mat'];
     
     % Name of the input data structures workspace
     CONFIG_strParams.sNetDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\final_net.mat'];
@@ -115,7 +115,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [1000 1000 1000];
+    CONFIG_strParams.vInitialLayersWidths = [400 400 400];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,
@@ -127,7 +127,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Number of iterations in backprop in which only upper layer weights
     % are updated
-    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 0;
+    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 50;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
     CONFIG_strParams.nBPNumEpochsBeforeMapping = 50;

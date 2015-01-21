@@ -54,7 +54,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams_deep_auto()
     CONFIG_strParams.sMemorySavingMode = 'OFF';
     
     % Features file name
-    CONFIG_strParams.sFeaturesFileName = 'features\arsenl_lemma (SentiScore).csv';
+    CONFIG_strParams.sFeaturesFileName = 'features\arsenl_sentence (sentiScore).csv';
     
     CONFIG_strParams.eFeaturesMode = 'Normal';
     
@@ -104,10 +104,10 @@ function [CONFIG_strParams] = CONFIG_setConfigParams_deep_auto()
     CONFIG_strParams.sLearnLogFile = [CONFIG_strParams.sConfigEnvPath '\learning_log.txt'];
     
     % Number of layers of the initial net, execluding input and top/targets/output layer
-    CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
+    CONFIG_strParams.nInitialNumLayers = 4;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [100 50 20];
+    CONFIG_strParams.vInitialLayersWidths = [200 100 50 20];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,
@@ -122,7 +122,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams_deep_auto()
     CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 6;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
-    CONFIG_strParams.nBPNumEpochsBeforeMapping = 10;
+    CONFIG_strParams.nBPNumEpochsBeforeMapping = 5;
     
     % Number of epochs in backprop training during mapping (re-use) phase
     CONFIG_strParams.nBPNumEpochsDuringMapping = 1;
