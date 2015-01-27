@@ -104,10 +104,10 @@ function [CONFIG_strParams] = CONFIG_setConfigParams_deep_auto()
     CONFIG_strParams.sLearnLogFile = [CONFIG_strParams.sConfigEnvPath '\learning_log.txt'];
     
     % Number of layers of the initial net, execluding input and top/targets/output layer
-    CONFIG_strParams.nInitialNumLayers = 4;% Execluding input and top/targets/output layer
+    CONFIG_strParams.nInitialNumLayers = 6;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [200 100 50 20];
+    CONFIG_strParams.vInitialLayersWidths = [200 100 50 20 5 3];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,

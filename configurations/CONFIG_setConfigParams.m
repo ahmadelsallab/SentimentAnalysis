@@ -47,7 +47,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
 	% MNIST
 	% Diacritization
 	% TIMIT (Not supported yet)
-	CONFIG_strParams.sDataset = '';
+	CONFIG_strParams.sDataset = 'ATB_Senti';
 	
 	% The path of the dataset files
 	CONFIG_strParams.sDatasetFilesPath = 'C:\Non_valeo\Research\PostDoc\Sentiment Analysis\Code\Datasets\ATB\';
@@ -62,7 +62,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.sMemorySavingMode = 'OFF';
     
     % Features file name
-    CONFIG_strParams.sFeaturesFileName = 'features\arsenl_sentence (sentiScore).csv';
+    CONFIG_strParams.sFeaturesFileName = 'features\arsenl_lemma (sentiScore).csv';
     
     CONFIG_strParams.eFeaturesMode = 'Normal';
     
@@ -70,7 +70,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.sNameofErrWorkspace = [CONFIG_strParams.sConfigEnvPath '\err_performance.mat'];
     
     % Name of the input data structures workspace
-    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data_auto_encoder_codes.mat'];
+    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data.mat'];
     
     % Name of the input data structures workspace
     CONFIG_strParams.sNetDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\final_net.mat'];
@@ -115,7 +115,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nInitialNumLayers = 3;% Execluding input and top/targets/output layer
     
     % The architecture of the initial net
-    CONFIG_strParams.vInitialLayersWidths = [400 400 400];
+    CONFIG_strParams.vInitialLayersWidths = [100 100 100];
     
     % The final first layer width. This ratio shall be used to inflate all
     % other layers. Example: if init layer width = 100 and final one = 500,
@@ -127,7 +127,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Number of iterations in backprop in which only upper layer weights
     % are updated
-    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 50;
+    CONFIG_strParams.nBPNumEpochsForUpperLayerTraining = 20;
     
     % Number of epochs in backprop training the basic net before mapping (re-use) starts 
     CONFIG_strParams.nBPNumEpochsBeforeMapping = 50;
@@ -143,7 +143,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nNumTrainedUpperLayers = 1; % It means update w_class and NW_weights{CONFIG_strParams.nInitialNumLayers} (last layer), so number is the execluding the top layer
     
     % Is pre-training enabled
-    CONFIG_strParams.bEnablePretraining = 0;
+    CONFIG_strParams.bEnablePretraining = 1;
         if (CONFIG_strParams.bEnablePretraining == 1) 
             % Pre-training (RBM) epochs
             CONFIG_strParams.nPreTrainEpochs = 50;
