@@ -1,64 +1,16 @@
-Training sub-net with arch 100 100 100 
+Training sub-net with arch 1000 1000 1000 
 Initializing net...
-Initializing Layer 1 with RBM: 11385-100 
+Initializing Layer 1 with RBM: 3813-1000 
 Pre-training RBM
-Initializing Layer 2 with RBM: 100-100 
+Initializing Layer 2 with RBM: 1000-1000 
 Pre-training RBM
-Initializing Layer 3 with RBM: 100-100 
+Initializing Layer 3 with RBM: 1000-1000 
 Pre-training RBM
 Initializing done successfuly
 Fine tuning ...
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 1 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
+Recall = 4.800000e-001, Precision = 5.000000e-001, F1 score = 4.897959e-001
+Before epoch 1 Train # misclassified: 481 (from 900). Test # misclassified: 100 (from 200) 	 	 
+Recall = 3.600000e-001, Precision = 5.000000e-001, F1 score = 4.186047e-001
 Before epoch 2 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 3 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 4 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 5 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 6 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 7 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 8 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 9 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 10 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 11 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 12 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 13 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 14 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 15 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 16 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 17 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 18 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 19 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 20 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 21 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 22 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 23 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 24 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 25 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 26 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 0, Precision = NaN, F1 score = NaN
-Before epoch 27 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
+Recall = 2.800000e-001, Precision = 4.827586e-001, F1 score = 3.544304e-001
+Before epoch 3 Train # misclassified: 324 (from 900). Test # misclassified: 102 (from 200) 	 	 
