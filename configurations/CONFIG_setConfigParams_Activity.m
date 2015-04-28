@@ -42,7 +42,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     % MATLAB: the input is just an auto-generated matlab function setting
     % the matrices values
     % TxtFile: the input is a txt file needs to be parsed
-    CONFIG_strParams.sInputFormat = 'MatlabWorkspaceReadyTestTrainSplit';
+    CONFIG_strParams.sInputFormat = 'MatlabWorkspace';
 	
 	% Configuration of the dataset to be used
 	% MNIST
@@ -72,7 +72,9 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     
     % Name of the input data structures workspace
     %CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data_red.mat'];
-    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data_auto_encoder_codes.mat'];
+    %CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data_auto_encoder_codes.mat'];
+    CONFIG_strParams.sInputDataWorkspace = [CONFIG_strParams.sConfigEnvPath '\input_data_jog_100.mat'];
+    
     
     
     % Name of the input data structures workspace
@@ -92,7 +94,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nMaxFeaturesRange = 1;
     
     % Batch size to use when making batches (training and testing)
-    CONFIG_strParams.nBatchSize = 100;
+    CONFIG_strParams.nBatchSize = 2;
     
     % Is automating labeling enabled
     CONFIG_strParams.bAutoLabel = 0;
@@ -146,7 +148,7 @@ function [CONFIG_strParams] = CONFIG_setConfigParams()
     CONFIG_strParams.nNumTrainedUpperLayers = 1; % It means update w_class and NW_weights{CONFIG_strParams.nInitialNumLayers} (last layer), so number is the execluding the top layer
     
     % Is pre-training enabled
-    CONFIG_strParams.bEnablePretraining = 1;
+    CONFIG_strParams.bEnablePretraining = 0;
         if (CONFIG_strParams.bEnablePretraining == 1) 
             % Pre-training (RBM) epochs
             CONFIG_strParams.nPreTrainEpochs = 50;

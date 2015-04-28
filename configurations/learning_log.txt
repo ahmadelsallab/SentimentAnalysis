@@ -1,16 +1,123 @@
-Training sub-net with arch 1000 1000 1000 
+Training sub-net with arch 100 100 100 
 Initializing net...
-Initializing Layer 1 with RBM: 3813-1000 
+Initializing Layer 1 with RBM: 1-100 
 Pre-training RBM
-Initializing Layer 2 with RBM: 1000-1000 
+Initializing Layer 2 with RBM: 100-100 
 Pre-training RBM
-Initializing Layer 3 with RBM: 1000-1000 
+Initializing Layer 3 with RBM: 100-100 
 Pre-training RBM
 Initializing done successfuly
 Fine tuning ...
-Recall = 4.800000e-001, Precision = 5.000000e-001, F1 score = 4.897959e-001
-Before epoch 1 Train # misclassified: 481 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 3.600000e-001, Precision = 5.000000e-001, F1 score = 4.186047e-001
-Before epoch 2 Train # misclassified: 364 (from 900). Test # misclassified: 100 (from 200) 	 	 
-Recall = 2.800000e-001, Precision = 4.827586e-001, F1 score = 3.544304e-001
-Before epoch 3 Train # misclassified: 324 (from 900). Test # misclassified: 102 (from 200) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 1 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 2 Train # misclassified: 24 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 3 Train # misclassified: 29 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 4 Train # misclassified: 14 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 5 Train # misclassified: 9 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 6 Train # misclassified: 25 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 7 Train # misclassified: 25 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 8 Train # misclassified: 20 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 9 Train # misclassified: 14 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 10 Train # misclassified: 24 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 11 Train # misclassified: 10 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 12 Train # misclassified: 9 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 13 Train # misclassified: 14 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 14 Train # misclassified: 25 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 15 Train # misclassified: 23 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 16 Train # misclassified: 27 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 17 Train # misclassified: 14 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 18 Train # misclassified: 13 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 19 Train # misclassified: 17 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 20 Train # misclassified: 14 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 21 Train # misclassified: 10 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 1, F1 score = 1
+Before epoch 22 Train # misclassified: 16 (from 78). Test # misclassified: 0 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 23 Train # misclassified: 22 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 1, Precision = 7.500000e-001, F1 score = 8.571429e-001
+Before epoch 24 Train # misclassified: 25 (from 78). Test # misclassified: 1 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 25 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 26 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 27 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 28 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 29 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 30 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 31 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 32 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 33 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 34 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 35 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 36 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 37 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 38 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 39 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 40 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 41 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 42 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 43 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 44 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 45 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 46 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 47 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 48 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 49 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Recall = 0, Precision = NaN, F1 score = NaN
+Before epoch 50 Train # misclassified: 23 (from 78). Test # misclassified: 3 (from 8) 	 	 
+Fine tuning done successfuly
+Update Net
+Classification error of phase 1: 0
+Training sub-net with arch 100 100 100 
+Initializing net...
+Initializing Layer 1 with RBM: 1-100 
+Pre-training RBM
+Initializing Layer 2 with RBM: 100-100 
+Pre-training RBM
+Initializing Layer 3 with RBM: 100-100 
+Pre-training RBM
+Initializing done successfuly
+Fine tuning ...
