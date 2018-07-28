@@ -12,7 +12,7 @@
     branch = master
 [submodule "classifiers"]
 	path = classifiers
-	url = https://ahmad.elsallab:Hello2Day@gitlab.com/ahmad.elsallab/classifiers.git
+	url = https://github.com/ahmadelsallab/Classifiers.git
     branch = master
 [submodule "twittercrawler"]
 	path = twittercrawler
