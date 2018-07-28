@@ -1,14 +1,14 @@
 [submodule "featuresextractor"]
 	path = featuresextractor
-	url = https://ahmad.elsallab:Hello2Day@gitlab.com/ahmad.elsallab/featuresextractor.git
+	url = https://github.com/ahmadelsallab/featuresextractor.git
     branch = master
 [submodule "languagemodel"]
 	path = languagemodel
-	url = https://ahmad.elsallab:Hello2Day@gitlab.com/ahmad.elsallab/languagemodel.git
+	url = https://github.com/ahmadelsallab/languagemodel.git
     branch = master
 [submodule "datasetbuilder"]
 	path = datasetbuilder
-	url = https://ahmad.elsallab:Hello2Day@gitlab.com/ahmad.elsallab/datasetbuilder.git
+	url = https://github.com/ahmadelsallab/datasetbuilder.git
     branch = master
 [submodule "classifiers"]
 	path = classifiers
@@ -16,9 +16,9 @@
     branch = master
 [submodule "twittercrawler"]
 	path = twittercrawler
-	url = https://ahmad.elsallab:Hello2Day@gitlab.com/ahmad.elsallab/twittercrawler.git
+	url = https://github.com/ahmadelsallab/twittercrawler.git
     branch = master
 [submodule "sentimentwebsite"]
 	path = sentimentwebsite
-	url = https://ahmad.elsallab:Hello2Day@gitlab.com/ahmad.elsallab/sentimentwebsite.git
+	url = https://github.com/ahmadelsallab/sentimentwebsite.git
     branch = master
